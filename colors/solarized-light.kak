@@ -20,53 +20,53 @@ evaluate-commands %sh{
 
     echo "
         # code
-        face global value              ${cyan}
-        face global type               ${red}
-        face global variable           ${blue}
-        face global module             ${cyan}
-        face global function           ${blue}
-        face global string             ${cyan}
-        face global keyword            ${green}
-        face global operator           ${yellow}
-        face global attribute          ${violet}
-        face global comment            ${base1}
-        face global meta               ${orange}
-        face global builtin            default+b
+        face %arg{1} value              ${cyan}
+        face %arg{1} type               ${red}
+        face %arg{1} variable           ${blue}
+        face %arg{1} module             ${cyan}
+        face %arg{1} function           ${blue}
+        face %arg{1} string             ${cyan}
+        face %arg{1} keyword            ${green}
+        face %arg{1} operator           ${yellow}
+        face %arg{1} attribute          ${violet}
+        face %arg{1} comment            ${base1}
+        face %arg{1} meta               ${orange}
+        face %arg{1} builtin            default+b
 
         # markup
-        face global title              ${blue}+b
-        face global header             ${blue}
-        face global bold               ${base01}+b
-        face global italic             ${base01}+i
-        face global mono               ${base1}
-        face global block              ${cyan}
-        face global link               ${base01}
-        face global bullet             ${yellow}
-        face global list               ${green}
+        face %arg{1} title              ${blue}+b
+        face %arg{1} header             ${blue}
+        face %arg{1} bold               ${base01}+b
+        face %arg{1} italic             ${base01}+i
+        face %arg{1} mono               ${base1}
+        face %arg{1} block              ${cyan}
+        face %arg{1} link               ${base01}
+        face %arg{1} bullet             ${yellow}
+        face %arg{1} list               ${green}
 
         # builtin
-        face global Default            ${base00},${base3}
-        face global PrimarySelection   ${base3},${blue}
-        face global SecondarySelection ${base1},${base01}
-        face global PrimaryCursor      ${base3},${base00}
-        face global SecondaryCursor    ${base3},${base1}
-        face global PrimaryCursorEol   ${base3},${yellow}
-        face global SecondaryCursorEol ${base3},${orange}
-        face global LineNumbers        ${base1},${base2}
-        face global LineNumberCursor   ${base01},${base2}
-        face global LineNumbersWrapped ${base2},${base2}
-        face global MenuForeground     ${base3},${yellow}
-        face global MenuBackground     ${base01},${base2}
-        face global MenuInfo           ${base1}
-        face global Information        ${base2},${base1}
-        face global Error              ${red},default+b
-        face global StatusLine         ${base01},${base2}+b
-        face global StatusLineMode     ${orange}
-        face global StatusLineInfo     ${cyan}
-        face global StatusLineValue    ${green}
-        face global StatusCursor       ${base0},${base03}
-        face global Prompt             ${yellow}+b
-        face global MatchingChar       ${red},${base2}+b
-        face global BufferPadding      ${base1},${base3}
+        face %arg{1} Default            ${base00},${base3}
+        face %arg{1} PrimarySelection   ${base3},${blue}
+        face %arg{1} SecondarySelection ${base1},${base01}
+        face %arg{1} PrimaryCursor      ${base3},${base00}
+        face %arg{1} SecondaryCursor    ${base3},${base1}
+        face %arg{1} PrimaryCursorEol   ${base3},${yellow}
+        face %arg{1} SecondaryCursorEol ${base3},${orange}
+        face %arg{1} LineNumbers        ${base1},${base2}
+        face %arg{1} LineNumberCursor   ${base01},${base2}
+        face %arg{1} LineNumbersWrapped ${base2},${base2}
+        face %arg{1} MenuForeground     ${base3},${yellow}
+        face %arg{1} MenuBackground     ${base01},${base2}
+        face %arg{1} MenuInfo           ${base1}
+        face %arg{1} Information        ${base2},${base1}
+        face %arg{1} Error              ${red},default+b
+        face %arg{1} StatusLine         ${base01},${base2}+b
+        face %arg{1} StatusLineMode     ${orange}
+        face %arg{1} StatusLineInfo     ${cyan}
+        face %arg{1} StatusLineValue    ${green}
+        face %arg{1} StatusCursor       ${base0},${base03}
+        face %arg{1} Prompt             ${yellow}+b
+        face %arg{1} MatchingChar       ${red},${base2}+b
+        face %arg{1} BufferPadding      ${base1},${base3}
     "
 }

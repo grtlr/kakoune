@@ -23,56 +23,56 @@ evaluate-commands %sh{
 
     ## code
     echo "
-        face global value ${orange}
-        face global type ${yellow}
-        face global variable ${magenta}
-        face global module ${green}
-        face global function ${aqua}
-        face global string ${green_dark}
-        face global keyword ${purple}
-        face global operator ${aqua}
-        face global attribute ${purple}
-        face global comment ${comment}
-        face global meta ${purple}
-        face global builtin ${orange}
+        face %arg{1} value ${orange}
+        face %arg{1} type ${yellow}
+        face %arg{1} variable ${magenta}
+        face %arg{1} module ${green}
+        face %arg{1} function ${aqua}
+        face %arg{1} string ${green_dark}
+        face %arg{1} keyword ${purple}
+        face %arg{1} operator ${aqua}
+        face %arg{1} attribute ${purple}
+        face %arg{1} comment ${comment}
+        face %arg{1} meta ${purple}
+        face %arg{1} builtin ${orange}
     "
 
     ## markup
     echo "
-        face global title blue
-        face global header ${aqua}
-        face global bold ${yellow}
-        face global italic ${orange}
-        face global mono ${green_dark}
-        face global block ${orange}
-        face global link blue
-        face global bullet ${red}
-        face global list ${red}
+        face %arg{1} title blue
+        face %arg{1} header ${aqua}
+        face %arg{1} bold ${yellow}
+        face %arg{1} italic ${orange}
+        face %arg{1} mono ${green_dark}
+        face %arg{1} block ${orange}
+        face %arg{1} link blue
+        face %arg{1} bullet ${red}
+        face %arg{1} list ${red}
     "
 
     ## builtin
     echo "
-        face global Default ${text},${background}
-        face global PrimarySelection default,${selection}
-        face global SecondarySelection default,${selection}
-        face global PrimaryCursor black,${aqua}
-        face global SecondaryCursor black,${aqua}
-        face global PrimaryCursorEol black,${green_dark}
-        face global SecondaryCursorEol black,${green_dark}
-        face global LineNumbers ${text_light},${background}
-        face global LineNumberCursor ${yellow},rgb:282828+b
-        face global MenuForeground ${text_light},blue
-        face global MenuBackground ${aqua},${window}
-        face global MenuInfo ${aqua}
-        face global Information white,${window}
-        face global Error white,${red}
-        face global StatusLine ${text},${window}
-        face global StatusLineMode ${yellow}+b
-        face global StatusLineInfo ${aqua}
-        face global StatusLineValue ${green_dark}
-        face global StatusCursor ${window},${aqua}
-        face global Prompt ${background},${aqua}
-        face global MatchingChar ${yellow},${background}+b
-        face global BufferPadding ${aqua},${background}
+        face %arg{1} Default ${text},${background}
+        face %arg{1} PrimarySelection default,${selection}
+        face %arg{1} SecondarySelection default,${selection}
+        face %arg{1} PrimaryCursor black,${aqua}
+        face %arg{1} SecondaryCursor black,${aqua}
+        face %arg{1} PrimaryCursorEol black,${green_dark}
+        face %arg{1} SecondaryCursorEol black,${green_dark}
+        face %arg{1} LineNumbers ${text_light},${background}
+        face %arg{1} LineNumberCursor ${yellow},rgb:282828+b
+        face %arg{1} MenuForeground ${text_light},blue
+        face %arg{1} MenuBackground ${aqua},${window}
+        face %arg{1} MenuInfo ${aqua}
+        face %arg{1} Information white,${window}
+        face %arg{1} Error white,${red}
+        face %arg{1} StatusLine ${text},${window}
+        face %arg{1} StatusLineMode ${yellow}+b
+        face %arg{1} StatusLineInfo ${aqua}
+        face %arg{1} StatusLineValue ${green_dark}
+        face %arg{1} StatusCursor ${window},${aqua}
+        face %arg{1} Prompt ${background},${aqua}
+        face %arg{1} MatchingChar ${yellow},${background}+b
+        face %arg{1} BufferPadding ${aqua},${background}
     "
 }

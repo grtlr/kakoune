@@ -31,52 +31,52 @@ evaluate-commands %sh{
 
     echo "
         # then we map them to code
-        face global value ${zenconstant}
-        face global type ${zentype}
-        face global variable ${zenvariable}
-        face global module ${zenstring}
-        face global function ${zenfunction}
-        face global string ${zenstring}
-        face global keyword ${zenkeyword}
-        face global operator ${zenfunction}
-        face global attribute ${zenstatement}
-        face global comment ${zencomment}
-        face global meta ${zenspecial}
-        face global builtin default+b
+        face %arg{1} value ${zenconstant}
+        face %arg{1} type ${zentype}
+        face %arg{1} variable ${zenvariable}
+        face %arg{1} module ${zenstring}
+        face %arg{1} function ${zenfunction}
+        face %arg{1} string ${zenstring}
+        face %arg{1} keyword ${zenkeyword}
+        face %arg{1} operator ${zenfunction}
+        face %arg{1} attribute ${zenstatement}
+        face %arg{1} comment ${zencomment}
+        face %arg{1} meta ${zenspecial}
+        face %arg{1} builtin default+b
 
         # and markup
-        face global title ${zenkeyword}
-        face global header ${zenconstant}
-        face global bold ${zenstorageClass}
-        face global italic ${zenfunction}
-        face global mono ${zennumber}
-        face global block ${zenstatement}
-        face global link ${zenstring}
-        face global bullet ${zenvariable}
-        face global list ${zentype}
+        face %arg{1} title ${zenkeyword}
+        face %arg{1} header ${zenconstant}
+        face %arg{1} bold ${zenstorageClass}
+        face %arg{1} italic ${zenfunction}
+        face %arg{1} mono ${zennumber}
+        face %arg{1} block ${zenstatement}
+        face %arg{1} link ${zenstring}
+        face %arg{1} bullet ${zenvariable}
+        face %arg{1} list ${zentype}
 
         # and built in faces
-        face global Default ${zendefault}
-        face global PrimarySelection ${zentext},${zenselectionbg}
-        face global SecondarySelection ${zensecondaryfg},${zenselectionbg}
-        face global PrimaryCursor ${zencursor}
-        face global SecondaryCursor ${zencursor}
-        face global PrimaryCursorEol ${zencursoreol}
-        face global SecondaryCursorEol ${zencursoreol}
-        face global LineNumbers ${zendefault}
-        face global LineNumberCursor ${zenstatus}
-        face global MenuForeground ${zenmenufg}
-        face global MenuBackground ${zenmenubg}
-        face global MenuInfo rgb:cc9393
-        face global Information ${zeninfo}
-        face global Error default,red
-        face global StatusLine ${zenstatus}
-        face global StatusLineMode ${zencomment}
-        face global StatusLineInfo ${zenspecial}
-        face global StatusLineValue ${zennumber}
-        face global StatusCursor ${zenstatuscursor}
-        face global Prompt ${zenconstant}
-        face global MatchingChar default+b
-        face global BufferPadding ${zenpadding}
+        face %arg{1} Default ${zendefault}
+        face %arg{1} PrimarySelection ${zentext},${zenselectionbg}
+        face %arg{1} SecondarySelection ${zensecondaryfg},${zenselectionbg}
+        face %arg{1} PrimaryCursor ${zencursor}
+        face %arg{1} SecondaryCursor ${zencursor}
+        face %arg{1} PrimaryCursorEol ${zencursoreol}
+        face %arg{1} SecondaryCursorEol ${zencursoreol}
+        face %arg{1} LineNumbers ${zendefault}
+        face %arg{1} LineNumberCursor ${zenstatus}
+        face %arg{1} MenuForeground ${zenmenufg}
+        face %arg{1} MenuBackground ${zenmenubg}
+        face %arg{1} MenuInfo rgb:cc9393
+        face %arg{1} Information ${zeninfo}
+        face %arg{1} Error default,red
+        face %arg{1} StatusLine ${zenstatus}
+        face %arg{1} StatusLineMode ${zencomment}
+        face %arg{1} StatusLineInfo ${zenspecial}
+        face %arg{1} StatusLineValue ${zennumber}
+        face %arg{1} StatusCursor ${zenstatuscursor}
+        face %arg{1} Prompt ${zenconstant}
+        face %arg{1} MatchingChar default+b
+        face %arg{1} BufferPadding ${zenpadding}
     "
 }

@@ -22,52 +22,52 @@ evaluate-commands %sh{
     # Base color definitions
     echo "
         # then we map them to code
-        face global value      ${orange_light}+b
-        face global type       ${orange}
-        face global variable   default
-        face global module     ${green}
-        face global function   default
-        face global string     ${green}
-        face global keyword    ${brown_dark}
-        face global operator   default
-        face global attribute  ${green}
-        face global comment    ${brown_light}
-        face global meta       ${brown_dark}
-        face global builtin   default+b
+        face %arg{1} value      ${orange_light}+b
+        face %arg{1} type       ${orange}
+        face %arg{1} variable   default
+        face %arg{1} module     ${green}
+        face %arg{1} function   default
+        face %arg{1} string     ${green}
+        face %arg{1} keyword    ${brown_dark}
+        face %arg{1} operator   default
+        face %arg{1} attribute  ${green}
+        face %arg{1} comment    ${brown_light}
+        face %arg{1} meta       ${brown_dark}
+        face %arg{1} builtin   default+b
 
         # and markup
-        face global title      ${orange}+b
-        face global header     ${orange}+b
-        face global bold       default+b
-        face global italic     default+i
-        face global mono       ${green_light}
-        face global block      ${green}
-        face global link       ${orange}
-        face global bullet     ${brown_dark}
-        face global list       ${black}
+        face %arg{1} title      ${orange}+b
+        face %arg{1} header     ${orange}+b
+        face %arg{1} bold       default+b
+        face %arg{1} italic     default+i
+        face %arg{1} mono       ${green_light}
+        face %arg{1} block      ${green}
+        face %arg{1} link       ${orange}
+        face %arg{1} bullet     ${brown_dark}
+        face %arg{1} list       ${black}
 
         # and built in faces
-        face global Default            ${black_light},${white}
-        face global PrimarySelection   ${black},${brown_lighter}
-        face global SecondarySelection ${black_light},${grey_light}
-        face global PrimaryCursor      ${black},${grey_dark}
-        face global SecondaryCursor    ${black},${grey_dark}
-        face global PrimaryCursorEol   ${black},${brown_dark}
-        face global SecondaryCursorEol ${black},${brown_dark}
-        face global LineNumbers        ${grey_dark},${white}
-        face global LineNumberCursor   ${grey_dark},${brown_lighter}
-        face global MenuForeground     ${orange},${brown_lighter}
-        face global MenuBackground     ${black_light},${brown_lighter}
-        face global MenuInfo           default,${black}
-        face global Information        ${black_light},${brown_lighter}
-        face global Error              default,${red}
-        face global StatusLine         ${black},${grey_light}
-        face global StatusLineMode     ${orange}
-        face global StatusLineInfo     ${black}+b
-        face global StatusLineValue    ${green_light}
-        face global StatusCursor       ${orange},${white_light}
-        face global Prompt             ${black_light}
-        face global MatchingChar       default+b
-        face global BufferPadding      ${grey_dark},${white}
+        face %arg{1} Default            ${black_light},${white}
+        face %arg{1} PrimarySelection   ${black},${brown_lighter}
+        face %arg{1} SecondarySelection ${black_light},${grey_light}
+        face %arg{1} PrimaryCursor      ${black},${grey_dark}
+        face %arg{1} SecondaryCursor    ${black},${grey_dark}
+        face %arg{1} PrimaryCursorEol   ${black},${brown_dark}
+        face %arg{1} SecondaryCursorEol ${black},${brown_dark}
+        face %arg{1} LineNumbers        ${grey_dark},${white}
+        face %arg{1} LineNumberCursor   ${grey_dark},${brown_lighter}
+        face %arg{1} MenuForeground     ${orange},${brown_lighter}
+        face %arg{1} MenuBackground     ${black_light},${brown_lighter}
+        face %arg{1} MenuInfo           default,${black}
+        face %arg{1} Information        ${black_light},${brown_lighter}
+        face %arg{1} Error              default,${red}
+        face %arg{1} StatusLine         ${black},${grey_light}
+        face %arg{1} StatusLineMode     ${orange}
+        face %arg{1} StatusLineInfo     ${black}+b
+        face %arg{1} StatusLineValue    ${green_light}
+        face %arg{1} StatusCursor       ${orange},${white_light}
+        face %arg{1} Prompt             ${black_light}
+        face %arg{1} MatchingChar       default+b
+        face %arg{1} BufferPadding      ${grey_dark},${white}
     "
 }

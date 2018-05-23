@@ -18,56 +18,56 @@ evaluate-commands %sh{
 
     ## code
     echo "
-        face global value ${orange_dark}+b
-        face global type ${orange_light}
-        face global variable ${magenta_dark}
-        face global module ${green_dark}
-        face global function ${cyan_light}
-        face global string ${green_dark}
-        face global keyword ${purple_dark}+b
-        face global operator ${cyan_light}
-        face global attribute ${orange_dark}
-        face global comment ${grey_dark}
-        face global meta ${orange_light}
-        face global builtin default+b
+        face %arg{1} value ${orange_dark}+b
+        face %arg{1} type ${orange_light}
+        face %arg{1} variable ${magenta_dark}
+        face %arg{1} module ${green_dark}
+        face %arg{1} function ${cyan_light}
+        face %arg{1} string ${green_dark}
+        face %arg{1} keyword ${purple_dark}+b
+        face %arg{1} operator ${cyan_light}
+        face %arg{1} attribute ${orange_dark}
+        face %arg{1} comment ${grey_dark}
+        face %arg{1} meta ${orange_light}
+        face %arg{1} builtin default+b
     "
 
     ## markup
     echo "
-        face global title blue
-        face global header ${cyan_light}
-        face global bold ${orange_light}
-        face global italic ${orange_dark}
-        face global mono ${green_dark}
-        face global block ${orange_dark}
-        face global link blue
-        face global bullet ${magenta_light}
-        face global list ${magenta_dark}
+        face %arg{1} title blue
+        face %arg{1} header ${cyan_light}
+        face %arg{1} bold ${orange_light}
+        face %arg{1} italic ${orange_dark}
+        face %arg{1} mono ${green_dark}
+        face %arg{1} block ${orange_dark}
+        face %arg{1} link blue
+        face %arg{1} bullet ${magenta_light}
+        face %arg{1} list ${magenta_dark}
     "
 
     ## builtin
     echo "
-        face global Default ${grey_light},${black_lighter}
-        face global PrimarySelection white,blue
-        face global SecondarySelection black,blue
-        face global PrimaryCursor black,white
-        face global SecondaryCursor black,white
-        face global PrimaryCursorEol black,${cyan_light}
-        face global SecondaryCursorEol black,${cyan_light}
-        face global LineNumbers ${grey_light},${black_lighter}
-        face global LineNumberCursor ${grey_light},rgb:282828+b
-        face global MenuForeground ${grey_light},blue
-        face global MenuBackground blue,${grey_light}
-        face global MenuInfo ${cyan_light}
-        face global Information ${black_light},${cyan_light}
-        face global Error ${grey_light},${magenta_light}
-        face global StatusLine ${grey_light},${black_lighterer}
-        face global StatusLineMode ${orange_dark}
-        face global StatusLineInfo ${cyan_light}
-        face global StatusLineValue ${green_dark}
-        face global StatusCursor ${black_lighterer},${cyan_light}
-        face global Prompt ${black_light},${cyan_light}
-        face global MatchingChar ${cyan_light},${black_light}+b
-        face global BufferPadding ${cyan_light},${black_lighter}
+        face %arg{1} Default ${grey_light},${black_lighter}
+        face %arg{1} PrimarySelection white,blue
+        face %arg{1} SecondarySelection black,blue
+        face %arg{1} PrimaryCursor black,white
+        face %arg{1} SecondaryCursor black,white
+        face %arg{1} PrimaryCursorEol black,${cyan_light}
+        face %arg{1} SecondaryCursorEol black,${cyan_light}
+        face %arg{1} LineNumbers ${grey_light},${black_lighter}
+        face %arg{1} LineNumberCursor ${grey_light},rgb:282828+b
+        face %arg{1} MenuForeground ${grey_light},blue
+        face %arg{1} MenuBackground blue,${grey_light}
+        face %arg{1} MenuInfo ${cyan_light}
+        face %arg{1} Information ${black_light},${cyan_light}
+        face %arg{1} Error ${grey_light},${magenta_light}
+        face %arg{1} StatusLine ${grey_light},${black_lighterer}
+        face %arg{1} StatusLineMode ${orange_dark}
+        face %arg{1} StatusLineInfo ${cyan_light}
+        face %arg{1} StatusLineValue ${green_dark}
+        face %arg{1} StatusCursor ${black_lighterer},${cyan_light}
+        face %arg{1} Prompt ${black_light},${cyan_light}
+        face %arg{1} MatchingChar ${cyan_light},${black_light}+b
+        face %arg{1} BufferPadding ${cyan_light},${black_lighter}
     "
 }
