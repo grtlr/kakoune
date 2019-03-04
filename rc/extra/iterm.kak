@@ -1,12 +1,13 @@
 # https://www.iterm2.com
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-## The default behaviour for the `new` command is to open an vertical pane in
+## The default behaviour for the `terminal` command is to open a vertical pane in
 ## an iTerm session if not in a tmux session.
 hook global KakBegin .* %sh{
     if [ "$TERM_PROGRAM" = "iTerm.app" ] && [ -z "$TMUX" ]; then
         echo "
             alias global focus iterm-focus
+            alias global terminal iterm-terminal-horizontal
         "
     fi
 }
@@ -17,12 +18,17 @@ define-command -hidden -params 2.. iterm-terminal-split-impl %{
         shift
         # join the arguments as one string for the shell execution (see x11.kak)
         args=$(
-            for i in "$@"; do
-                if [ "$i" = '' ]; then
-                    printf "'' "
+            for i do
+                if [ -n "${i##*\'*}" ]; then
+                    # if the argument doesn't contain any ' (including if it's empty), simply surround it with ''
+                    printf "'%s'" "$i"
                 else
-                    printf %s "$i" | sed -e "s|'|'\\\\''|g; s|^|'|; s|$|' |"
+                    # if the argument contains any ', change them to '\'' and surround it with ''
+                    printf "'"
+                    printf "%s" "$i" | sed -e "s|'|'\\\\''|g"
+                    printf "'"
                 fi
+                printf ' '
             done
         )
         # go through another round of escaping for osascript
@@ -61,12 +67,15 @@ The program passed as argument will be executed in the new terminal'\
     nop %sh{
         # see above
         args=$(
-            for i in "$@"; do
-                if [ "$i" = '' ]; then
-                    printf "'' "
+            for i do
+                if [ -n "${i##*\'*}" ]; then
+                    printf "'%s'" "$i"
                 else
-                    printf %s "$i" | sed -e "s|'|'\\\\''|g; s|^|'|; s|$|' |"
+                    printf "'"
+                    printf "%s" "$i" | sed -e "s|'|'\\\\''|g"
+                    printf "'"
                 fi
+                printf ' '
             done
         )
         escaped=$(printf %s "$args" | sed -e 's|\|\\\\|g; s|"|\\"|g')
@@ -87,12 +96,15 @@ The program passed as argument will be executed in the new terminal'\
     nop %sh{
         # see above
         args=$(
-            for i in "$@"; do
-                if [ "$i" = '' ]; then
-                    printf "'' "
+            for i do
+                if [ -n "${i##*\'*}" ]; then
+                    printf "'%s'" "$i"
                 else
-                    printf %s "$i" | sed -e "s|'|'\\\\''|g; s|^|'|; s|$|' |"
+                    printf "'"
+                    printf "%s" "$i" | sed -e "s|'|'\\\\''|g"
+                    printf "'"
                 fi
+                printf ' '
             done
         )
         escaped=$(printf %s "$args" | sed -e 's|\|\\\\|g; s|"|\\"|g')
